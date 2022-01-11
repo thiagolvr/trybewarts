@@ -44,9 +44,13 @@
   display: flex;
 }
 
-.evaluation-form {
+#evaluation-form {
+  background-color: red;
   display: flex;
   width: 675px;
   flex-direction: column;
-  
+}
+
+#trybewarts-forms-logo {
+  height: 500px;
 }
