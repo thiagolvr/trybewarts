@@ -38,9 +38,18 @@
     <main class="main-conteiner">
       <form id="evaluation-form" action="" method="get ">
         <p>Trybewarts</p>
-        <input id="input-name" placeholder="Nome" type="text" />
-        <input id="input-lastname" placeholder="Sobrenome" type="text" />
-        <input id="input-email" placeholder="Email" type="email" />
+        <div>
+          <input id="input-name" placeholder="Nome" type="text" />
+          <input id="input-lastname" placeholder="Sobrenome" type="text" />
+          <input id="input-email" placeholder="Email" type="email" />
+        </div>
+
+        <div class="family-type-conteiner" >
+          <label for="">Qual sua família?</label>
+          <input type="radio" name="family" value="Frontend" >Frontend</input>
+          <input type="radio" name="family" value="Backend" >Backend</input>
+          <input type="radio" name="family" value="FullStack" >FullStack</input>
+        </div>
       </form>
       <img
         id="trybewarts-forms-logo"

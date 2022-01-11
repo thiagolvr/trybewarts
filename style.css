@@ -45,7 +45,6 @@
 }
 
 #evaluation-form {
-  background-color: red;
   display: flex;
   width: 675px;
   flex-direction: column;
