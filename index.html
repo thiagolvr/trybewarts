@@ -39,10 +39,11 @@
       <form id="evaluation-form" action="" method="get ">
         <h2>Formulário de Avaliação</h2>
         <section>
-          <div class="Fullname-conteiner" >
+          <div class="Fullname-conteiner">
             <input id="input-name" placeholder="Nome" type="text" />
             <input id="input-lastname" placeholder="Sobrenome" type="text" />
           </div>
+
           <div class="email-house-conteiner">
             <input id="input-email" placeholder="Email" type="email" />
             <select name="" id="house">
@@ -53,15 +54,20 @@
             </select>
           </div>
         </section>
-        
 
-        <section class="family-type-conteiner" >
+        <section class="family-type-conteiner" id="familyContainer">
           <label for="">Qual sua família?</label>
-          <input type="radio" name="family" value="Frontend" >Frontend</input>
-          <input type="radio" name="family" value="Backend" >Backend</input>
-          <input type="radio" name="family" value="FullStack" >FullStack</input>
         </section>
 
+        <section class="checkbox-container" id="checkboxContainer">
+          <label id="label-content"
+            >Qual conteúdo você está com mais vontade de aprender?</label
+          >
+        </section>
+
+        <section class="rate-container" id="rateContainer">
+          <label id="label-rate">Como você avalia a Trybewarts?</label>
+        </section>
       </form>
       <img
         id="trybewarts-forms-logo"
