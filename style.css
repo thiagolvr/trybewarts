@@ -39,3 +39,13 @@
   border: none;
   background-color: rgb(105, 61, 226);
 }
+
+.main-conteiner {
+  display: flex;
+}
+
+.evaluation-form {
+  display: flex;
+  width: 675px;
+  
+}
