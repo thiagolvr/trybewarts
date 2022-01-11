@@ -6,9 +6,36 @@
 
 .header {
   display: flex;
+  height: 80px;
   background-color: rgb(50, 167, 145);
+  justify-content: space-between;
+  align-items: center;
+  color: white;
 }
 
-.form {
+.trybewarts-header-logo {
+  height: 60px;
+}
+
+.trybewarts-login {
   display: flex;
+  width: 500px;
+  justify-content: space-evenly;
+}
+
+.trybewarts-login input {
+  height: 40px;
+  width: 180px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 10px;
+  /* border: 2px solid rgba(80, 79, 79, 0.726); */
+}
+
+.trybewarts-login button {
+  height: 40px;
+  width: 80px;
+  border-radius: 8px;
+  border: none;
+  background-color: rgb(105, 61, 226);
 }
