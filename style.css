@@ -29,7 +29,6 @@
   border-radius: 8px;
   border: none;
   padding-left: 10px;
-  /* border: 2px solid rgba(80, 79, 79, 0.726); */
 }
 
 .trybewarts-login button {
@@ -59,9 +58,6 @@
 }
 
 .email-house-conteiner {
-  /* width: 500px;
-  height: 60px;
-  justify-content: space-between; */
   display: flex;
 }
 
