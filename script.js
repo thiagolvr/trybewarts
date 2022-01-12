@@ -4,9 +4,11 @@ const passwordInp = document.getElementById("input-password");
 const checkboxContainer = document.getElementById("checkboxContainer");
 const familyContainer = document.getElementById("familyContainer");
 const rateContainer = document.getElementById("rateContainer");
+const houseConteiner = document.getElementById("house-conteiner");
 const toLearn = ["HoFs", "Jest", "Promises", "React", "SQL", "Python"];
 const rate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const family = ["Frontend", "Backend", "FullStack"];
+const select = ["Gitnória", "Reactpuff", "Corvinode", "Pytherina"];
 
 // function criada em call, decidimos mudar a estrutura do html, para criar dinamicamente pelo script.
 const inputConstructor = (arr, type, name, element) => {
@@ -27,6 +29,17 @@ const inputConstructor = (arr, type, name, element) => {
 inputConstructor(family, "radio", "family", familyContainer);
 inputConstructor(toLearn, "checkbox", "", checkboxContainer);
 inputConstructor(rate, "radio", "rate", rateContainer);
+
+const inputSelectOption = (arr) => {
+  arr.forEach((item) => {
+    const option = document.createElement("option");
+    option.innerText = item;
+    option.value = item;
+    option.id = item.toLocaleLowerCase() + "-house";
+    houseConteiner.appendChild(option);
+  });
+};
+inputSelectOption(select);
 
 const login = () => {
   alert(
