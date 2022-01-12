@@ -1,5 +1,5 @@
 const submitBtn = document.getElementById('submitBtn');
-const emailInp = document.getElementById('input-email');
+const emailInp = document.getElementById('input-email-header');
 const passwordInp = document.getElementById('input-password');
 const checkboxContainer = document.getElementById('checkboxContainer');
 const familyContainer = document.getElementById('familyContainer');

@@ -59,6 +59,17 @@
 
 .email-house-conteiner {
   display: flex;
+/* justify-content: space-between; */
+}
+
+#input-email {
+  width: 166px;
+  margin-right: 10px;
+}
+
+#house {
+  margin-left: 5px;
+  width: 116px;
 }
 
 .family-type-conteiner {
