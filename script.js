@@ -4,7 +4,7 @@ const passwordInp = document.getElementById("input-password");
 const checkboxContainer = document.getElementById("checkboxContainer");
 const familyContainer = document.getElementById("familyContainer");
 const rateContainer = document.getElementById("rateContainer");
-const houseConteiner = document.getElementById("house-conteiner");
+const houseConteiner = document.getElementById("house");
 const toLearn = ["HoFs", "Jest", "Promises", "React", "SQL", "Python"];
 const rate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const family = ["Frontend", "Backend", "FullStack"];
@@ -14,6 +14,7 @@ const select = ["Gitnória", "Reactpuff", "Corvinode", "Pytherina"];
 const inputConstructor = (arr, type, name, element) => {
   arr.forEach((item) => {
     const label = document.createElement("label");
+    const span = document.createElement("span");
     label.innerHTML = item;
     label.setAttribute("for", item);
     const newElement = document.createElement("input");
@@ -21,8 +22,9 @@ const inputConstructor = (arr, type, name, element) => {
     newElement.name = name;
     newElement.value = item;
     newElement.id = item;
-    element.appendChild(newElement);
-    element.appendChild(label);
+    span.appendChild(newElement);
+    span.appendChild(label);
+    element.appendChild(span);
   });
 };
 
@@ -35,10 +37,13 @@ const inputSelectOption = (arr) => {
     const option = document.createElement("option");
     option.innerText = item;
     option.value = item;
-    option.id = item.toLocaleLowerCase() + "-house";
+    option.id = `${
+      item === "Gitnória" ? "gitnoria" : item.toLocaleLowerCase()
+    }-house`;
     houseConteiner.appendChild(option);
   });
 };
+
 inputSelectOption(select);
 
 const login = () => {
