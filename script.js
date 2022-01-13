@@ -1,23 +1,30 @@
-const submitBtn = document.getElementById('submitBtn');
-const emailInp = document.getElementById('input-email-header');
-const passwordInp = document.getElementById('input-password');
-const checkboxContainer = document.getElementById('checkboxContainer');
-const familyContainer = document.getElementById('familyContainer');
-const rateContainer = document.getElementById('rateContainer');
-const houseConteiner = document.getElementById('house');
-const toLearn = ['HoFs', 'Jest', 'Promises', 'React', 'SQL', 'Python'];
+const loginBtn = document.getElementById("submitBtn");
+const emailInp = document.getElementById("input-email-header");
+const passwordInp = document.getElementById("input-password");
+const checkboxContainer = document.getElementById("checkboxContainer");
+const familyContainer = document.getElementById("familyContainer");
+const rateContainer = document.getElementById("rateContainer");
+const houseConteiner = document.getElementById("house");
+const check = document.getElementById("agreement");
+const submitBtn = document.getElementById("submit-btn");
+const textarea = document.getElementById("textarea");
+const countText = document.getElementById("counter");
+const form = document.getElementById("evaluation-form");
+const toLearn = ["HoFs", "Jest", "Promises", "React", "SQL", "Python"];
 const rate = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const family = ['Frontend', 'Backend', 'FullStack'];
-const select = ['Gitnória', 'Reactpuff', 'Corvinode', 'Pytherina'];
+const family = ["Frontend", "Backend", "FullStack"];
+const select = ["Gitnória", "Reactpuff", "Corvinode", "Pytherina"];
+submitBtn.disabled = true;
+let count = 500;
 
 // function criada em call, decidimos mudar a estrutura do html, para criar dinamicamente pelo script.
 const inputConstructor = (arr, type, name, element) => {
   arr.forEach((item) => {
-    const label = document.createElement('label');
-    const span = document.createElement('span');
+    const label = document.createElement("label");
+    const span = document.createElement("span");
     label.innerHTML = item;
-    label.setAttribute('for', item);
-    const newElement = document.createElement('input');
+    label.setAttribute("for", item);
+    const newElement = document.createElement("input");
     newElement.type = type;
     newElement.name = name;
     newElement.value = item;
@@ -28,36 +35,40 @@ const inputConstructor = (arr, type, name, element) => {
   });
 };
 
-inputConstructor(family, 'radio', 'family', familyContainer);
-inputConstructor(toLearn, 'checkbox', '', checkboxContainer);
-inputConstructor(rate, 'radio', 'rate', rateContainer);
-
 const inputSelectOption = (arr) => {
   arr.forEach((item) => {
-    const option = document.createElement('option');
+    const option = document.createElement("option");
     option.innerText = item;
     option.value = item;
-    option.id = `${item === 'Gitnória' ? 'gitnoria' : item.toLocaleLowerCase()
+    option.id = `${
+      item === "Gitnória" ? "gitnoria" : item.toLocaleLowerCase()
     }-house`;
     houseConteiner.appendChild(option);
   });
 };
 
-inputSelectOption(select);
-
 const login = () => {
   alert(
-    emailInp.value === 'tryber@teste.com' && passwordInp.value === '123456'
-      ? 'Olá, Tryber!'
-      : 'Email ou senha inválidos.',
+    emailInp.value === "tryber@teste.com" && passwordInp.value === "123456"
+      ? "Olá, Tryber!"
+      : "Email ou senha inválidos."
   );
 };
 
-submitBtn.addEventListener('click', login);
+const active = () => {
+  submitBtn.disabled = false;
+};
 
-const check = document.getElementById('agreement');
-const btn = document.getElementById('submit-btn');
-btn.disabled = true;
+const countCharacters = () => {
+  count = 500 - textarea.value.length;
+  countText.innerHTML = count;
+};
 
-const active = () => { btn.disabled = false; };
-check.addEventListener('click', active);
+inputConstructor(family, "radio", "family", familyContainer);
+inputConstructor(toLearn, "checkbox", "", checkboxContainer);
+inputConstructor(rate, "radio", "rate", rateContainer);
+inputSelectOption(select);
+
+check.addEventListener("click", active);
+loginBtn.addEventListener("click", login);
+textarea.addEventListener("keyup", countCharacters);

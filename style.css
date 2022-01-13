@@ -82,6 +82,29 @@
 }
 
 .textarea-conteiner {
+  /* position: relative; */
+  width: 550px;
+  height: 150px;
   display: flex;
   flex-direction: column;
+}
+
+#textarea {
+  max-width: 100%;
+  max-height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#counter {
+  margin-left: 500px;
+  margin-bottom: 30px;
+  width: 50px;
+}
+
+.submit-conteiner {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
