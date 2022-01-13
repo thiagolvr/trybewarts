@@ -54,3 +54,10 @@ const login = () => {
 };
 
 submitBtn.addEventListener('click', login);
+
+const check = document.getElementById('agreement');
+const btn = document.getElementById('submit-btn');
+btn.disabled = true;
+
+const active = () => { btn.disabled = false; };
+check.addEventListener('click', active);
